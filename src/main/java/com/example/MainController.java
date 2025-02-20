@@ -14,15 +14,39 @@ public class MainController {
     private TextField difficultyField;
 
     @FXML
-    private TextField lenghtField;
+    private TextField lengthField;
 
     @FXML
     private TextField startField;
 
     @FXML
     void onClickSaveButton(ActionEvent event) {
+        writeToFile();
+        addToDatabase();
+    }
+
+    @FXML
+    void onClickExitButton(ActionEvent event) {
+        System.exit(0);
+    }
+
+    private void writeToFile()
+    {
         Write write = new Write();
-        write.writeToFile(lenghtField.getText(), difficultyField.getText(), startField.getText(), destinationField.getText());
+        write.writeToFile(
+            lengthField.getText(), 
+            difficultyField.getText(), 
+            startField.getText(), 
+            destinationField.getText());
+    }
+
+    private void addToDatabase()
+    {
+        DataSource.tryCreateUtvonal(new Utvonal(
+            Double.parseDouble(lengthField.getText()), 
+            Integer.parseInt(difficultyField.getText()), 
+            startField.getText(), 
+            destinationField.getText()));
     }
 
 }

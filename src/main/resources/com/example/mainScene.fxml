@@ -4,18 +4,38 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
-
+<?import javafx.scene.text.Font?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.MainController">
    <children>
-      <Button layoutX="254.0" layoutY="323.0" mnemonicParsing="false" onAction="#onClickSaveButton" text="Mentés" />
-      <TextField fx:id="lenghtField" layoutX="274.0" layoutY="74.0" />
+      <Button layoutX="239.0" layoutY="302.0" mnemonicParsing="false" onAction="#onClickSaveButton" text="Mentés">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <TextField fx:id="lengthField" layoutX="274.0" layoutY="74.0" />
       <TextField fx:id="difficultyField" layoutX="274.0" layoutY="129.0" />
       <TextField fx:id="startField" layoutX="274.0" layoutY="188.0" />
       <TextField fx:id="destinationField" layoutX="274.0" layoutY="247.0" />
-      <Label layoutX="154.0" layoutY="74.0" text="Lenght" />
-      <Label layoutX="154.0" layoutY="133.0" text="Difficulty" />
-      <Label layoutX="154.0" layoutY="192.0" text="Start" />
-      <Label layoutX="154.0" layoutY="251.0" text="Destination" />
+      <Label layoutX="154.0" layoutY="74.0" text="Length">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="154.0" layoutY="133.0" text="Difficulty (1-10)">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="154.0" layoutY="192.0" text="Start">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="154.0" layoutY="251.0" text="Destination">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Button layoutX="556.0" layoutY="14.0" mnemonicParsing="false" onAction="#onClickExitButton" text="X" textFill="RED">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
    </children>
 </Pane>

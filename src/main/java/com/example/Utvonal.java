@@ -1,18 +1,15 @@
 package com.example;
 
 public class Utvonal {
-
     Integer id;
     Double length;
     Integer difficulty;
     String start;
     String destination;
 
-
         public Utvonal() {}
-    
 
-        public Utvonal(double length, Integer difficulty, String start, String destination) {
+        public Utvonal(Double length, Integer difficulty, String start, String destination) {
         this.length = length;
         this.difficulty = difficulty;
         this.start = start;
@@ -27,11 +24,11 @@ public class Utvonal {
         this.id = id;
         }
 
-        public double getLength() {
+        public Double getLength() {
         return length;
         }
 
-        public void setLength(double length) {
+        public void setLength(Double length) {
         this.length = length;
         }
 

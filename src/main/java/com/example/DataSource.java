@@ -19,7 +19,7 @@ public class DataSource {
     Mariadb mairadb = new Mariadb();
     Connection conn = mairadb.connect();
 
-    String sql = "INSERT INTO utvonal (length, difficulty, start, destination) VALUES (?, ?, ?, ?)";
+    String sql = "INSERT INTO Utvonalak (length, difficulty, start, destination) VALUES (?, ?, ?, ?)";
     PreparedStatement ps = conn.prepareStatement(sql);
     
     ps.setDouble(1, utvonal.length);
